@@ -5,6 +5,7 @@ console.log(chalk.bold.blue("\t Welcome To Our TODO List \t"));
 let todo = [""];
 let condition = true;
 while (condition = true) {
+    // let todo = [""];
     let q1 = await inquirer.prompt([{
             name: "opton",
             type: "list",
@@ -40,7 +41,7 @@ while (condition = true) {
             type: "number",
             message: chalk.italic.yellow("Enter the task number you Want To Delete ")
         });
-        todo.splice((index.index - 1));
+        todo.splice(index.index - 1, 1);
         console.log(chalk.yellow("The task has been deleted"));
         console.log(chalk.green("Your Todo list is now ", chalk.red(todo)));
     }
